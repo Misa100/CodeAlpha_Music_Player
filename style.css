@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to right, #9a1d86, #1595be);
+    color: #fff;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.player {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #282c34;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    text-align: center;
+}
+
+.details {
+    margin-bottom: 30px;
+}
+
+.track-art {
+    margin: 25px auto;
+    height: 250px;
+    width: 250px;
+    border: 2px solid #FFFAFA;
+    background-color: #333;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.5);
+}
+
+.now-playing {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.track-name {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.track-artist {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #bbb;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.buttons div {
+    transition: transform 0.3s ease;
+}
+
+.buttons div:hover {
+    transform: scale(1.1);
+}
+
+.slider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.seek_slider, .volume_slider {
+    appearance: none;
+    height: 5px;
+    background: #83A9FF;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.seek_slider {
+    width: 60%;
+}
+
+.volume_slider {
+    width: 30%;
+}
+
+.seek_slider::-webkit-slider-thumb, 
+.volume_slider::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid #3774FF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#wave {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.stroke {
+    background: #f1f1f1;
+    height: 70%;
+    width: 8px;
+    border-radius: 50px;
+    margin: 0 5px;
+    animation: animate 1.4s linear infinite;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .track-art {
+        height: 200px;
+        width: 200px;
+    }
+
+    .track-name {
+        font-size: 1.8rem;
+    }
+
+    .track-artist {
+        font-size: 1rem;
+    }
+
+    .playpause-track i {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .buttons div {
+        padding: 15px;
+    }
+
+    .seek_slider {
+        width: 80%;
+    }
+
+    .volume_slider {
+        width: 40%;
+    }
+
+    .track-name {
+        font-size: 1.5rem;
+    }
+
+    .track-artist {
+        font-size: 0.9rem;
+    }
+}
